@@ -41,7 +41,7 @@
             static function ListaAcao(){
                 try {
                     $pdo = Conn::conectar();
-                    $acao= $pdo->prepare("SELECT *, genero.nome AS nome_genero FROM produtos INNER JOIN genero ON produtos.idgenero = genero.id WHERE genero.id = '1' ");
+                    $acao= $pdo->prepare("SELECT * ,genero.nome AS nome_genero FROM produtos INNER JOIN genero ON produtos.idgenero = genero.id = '1' ");
                     $acao->execute();
                     $acao = $acao->fetchAll(PDO::FETCH_OBJ);
 
@@ -62,8 +62,19 @@
                 echo "ERROR: ".$e->getMessage();
             }
         }
+        static function ListaAventura(){
+            try {
+                $pdo = Conn::conectar();
+                $aventura= $pdo->prepare("SELECT * FROM produtos  ORDER BY id DESC LIMIT 20,30");
+                $aventura->execute();
+                $aventura = $aventura->fetchAll(PDO::FETCH_OBJ);
 
-
+                return $aventura;
+            } catch (PDOException $e){
+                echo "ERROR: ".$e->getMessage();
+            }
+        }
+   
         static function getProdutoById($Id){
             
 
