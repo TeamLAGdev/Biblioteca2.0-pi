@@ -32,7 +32,7 @@ header .container {
 
 .main-movie {
     font-size: 16px;
-    background: linear-gradient(rgba(160, 156, 156, 0.5),rgba(0,0,0,0.50)100%), url("../img/img/capa-house\ copy.jpg");
+    background: linear-gradient(rgba(160, 156, 156, 0.5),rgba(0,0,0,0.50)100%), url("https://www.surubimnews.com.br/wp-content/uploads/2019/02/ETE-ETE-ETE-1140x620.png");
     height: 500px;
     background-size: cover;
     display: flex;
@@ -128,4 +128,8 @@ header .container {
         width: 50%;
     
     }
+}
+
+.container{
+  width: 100%;
 }

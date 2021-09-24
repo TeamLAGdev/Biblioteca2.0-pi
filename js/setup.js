@@ -1,19 +1,23 @@
 // código informado na documentação do Owl Carousel 2
 $('.owl-carousel').owlCarousel({
-    loop: true,
+    loop: false,
+    rewind: false,
     margin: 10,
-    nav: true,
+    nav: false,
 
     // responsivo
-    responsive:{
-        0:{
-            items:1
+    responsive: {
+        0: {
+            items: 1
         },
-        600:{
-            items:3
+        400: {
+            items: 2
         },
-        1000:{
-            items:5
+        650: {
+            items: 3
+        },
+        1000: {
+            items: 5
         }
     }
 })
